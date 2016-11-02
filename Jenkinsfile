@@ -46,7 +46,7 @@ node('docker-cloud') {
   checkpoint 'Build Complete'
     stage 'Deploy to Prod'
     //using global library to deploy to docker cloud: params are (nodeLabel, imageTag, name, innerPort, outerPort, httpRequestAuthId)
-    dockerCloudDeploy('docker-cloud', "beedemo/mobile-deposit-api:$dockerTag", 'mobile-deposit-api', 8080, 8080, 'beedemo-docker-cloud')
+    //dockerCloudDeploy('docker-cloud', "beedemo/mobile-deposit-api:$dockerTag", 'mobile-deposit-api', 8080, 8080, 'beedemo-docker-cloud')
 
 
 node('docker-cloud') {
